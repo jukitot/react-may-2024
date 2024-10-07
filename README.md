@@ -1,4 +1,5 @@
-## Master branch
+## Lesson 1
+Components and props
 
 # Project location
 https://github.com/jukitot/react-may-2024
