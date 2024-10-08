@@ -5,7 +5,7 @@ import '../Product/Product.css'
 
 
 const Products = () => {
-    const [products, setProducts] = useState([])
+    const [products, setProducts] = useState<IProductModel[]>([])
 
     useEffect(() => {
         fetch('https://dummyjson.com/products')
