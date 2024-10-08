@@ -42,7 +42,7 @@ const Products = () => {
                                       minimumOrderQuantity,
                                       meta,
                                       images
-                                  }: IProductModel) => <li className={'w45'}>
+                                  }: IProductModel) => <li className={'w45'} key={id}>
                         <Product id={id}
                                  title={title}
                                  description={description}
