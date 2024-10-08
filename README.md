@@ -1,4 +1,8 @@
-## Master branch
+## Homework1
+
+з апі https://dummyjson.com/docs/products отримати та вивести всі елементи зі всіма полями.
+структура компонентів наступна -
+App - Products - Product[]
 
 # Project location
 https://github.com/jukitot/react-may-2024

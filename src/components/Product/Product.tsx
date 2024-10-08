@@ -53,8 +53,6 @@ const Product: FC<IProductModel> = ({
                     <p>{reviewerName}</p>
                     <p>{reviewerEmail}</p>
                 </li>)}</div>
-
-
         </>
     );
 };
