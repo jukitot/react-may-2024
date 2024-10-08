@@ -13,7 +13,7 @@ const App:FC = () => {
     },[])
   return (
       <>
-
+          {users.map(({name, id}) => <div key={id}>  {id} -- {name} </div>)}
       </>
   );
 }
