@@ -1,4 +1,8 @@
-## Master branch
+## Preview - lesson 2
+fetch data,
+state lifting,
+services,
+axios, axios and lifting, axios interceptors
 
 # Project location
 https://github.com/jukitot/react-may-2024
