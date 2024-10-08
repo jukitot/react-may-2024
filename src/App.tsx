@@ -1,11 +1,13 @@
-import React from 'react';
+import React, {FC} from 'react';
 import './App.css';
+import Products from "./components/Products/Products";
 
-function App() {
-  return (
-      <>
-      </>
-  );
+const App: FC = () => {
+    return (
+        <>
+            <Products/>
+        </>
+    );
 }
 
 export default App;

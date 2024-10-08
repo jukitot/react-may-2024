@@ -1,0 +1,20 @@
+.img {
+    width: 200px;
+}
+
+.no-style-list {
+    list-style: none;
+    width: 50vw;
+}
+
+.flex {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.w45 {
+    width: 45vw;
+}
