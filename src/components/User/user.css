@@ -1,0 +1,23 @@
+.box {
+    border-radius: 15px;
+    width: 25vw;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: powderblue;
+    text-align: center;
+}
+
+.btn {
+    height: 50px;
+    width: 150px;
+    background-color: #1f3c51;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #4f90a0;
+}
