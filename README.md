@@ -1,4 +1,5 @@
-## Master branch
+## Lesson2
+useState(), useEffect(), axios, services
 
 # Project location
 https://github.com/jukitot/react-may-2024
