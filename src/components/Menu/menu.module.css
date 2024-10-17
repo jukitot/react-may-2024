@@ -1,0 +1,17 @@
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    background-color: #ece2ce;
+    height: 100px;
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black
+}

@@ -1,4 +1,10 @@
-## Master branch
+## HW 3
+
+Створити сторінки та роути на них
+users
+posts
+comments
+При переході на кожну з них отримувати відповідні відповіді від джейсонплейсхолдеру та виводити всі об'єкти
 
 # Project location
 https://github.com/jukitot/react-may-2024
