@@ -1,0 +1,25 @@
+.userBlock {
+    width: 17%;
+    border: 1px solid grey;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #FFE6E6;
+}
+
+.userButton {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    background-color: #E1AFD1;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.userButton:hover {
+    background-color: #AD88C6;
+}

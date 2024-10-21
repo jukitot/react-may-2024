@@ -1,0 +1,21 @@
+.menuBg {
+    height: 10vh;
+    background-color: #AD88C6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-size: 24px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.86);
+}
