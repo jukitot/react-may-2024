@@ -1,23 +1,16 @@
-import React, {useEffect, useState} from 'react';
-import {useLocation, useParams} from "react-router-dom";
-import {getProduct, getProducts} from "../services/api.service";
+import React from 'react';
+import {useLocation} from "react-router-dom";
 import {IProduct} from "../models/IProduct";
 
-const ProductDetailsPage = () => {
-    let {id} = useParams();
-    const [product, setProduct] = useState<IProduct | null>(null)
-    useEffect(() => {
-        if (id) {
-            getProduct(id).then(value => setProduct(value))
-        }
 
-    }, []);
+const ProductDetailsPage = () => {
+let {state:{data}} = useLocation();
+    const product: IProduct = data;
     return (
         <div>
             {
-                JSON.stringify(product)
+             JSON.stringify(product)
             }
-
         </div>
     );
 };
