@@ -1,11 +1,13 @@
-import React, {FC} from 'react';
+import React from 'react';
 import './App.css';
+import FormComponent from "./components/FormComponent";
 
-const App:FC = () => {
-  return (
-      <>
-      </>
-  );
+const App = () => {
+    return (
+        <>
+            <FormComponent/>
+        </>
+    );
 }
 
 export default App;
