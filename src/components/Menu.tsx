@@ -1,9 +1,12 @@
 import React, {memo, useEffect} from 'react';
+type MenuTypes = {
+    id: number;
+    someFn:()=>void
+}
+const Menu = memo(({id, someFn}:MenuTypes) => {
 
-const Menu = memo(({id}:{id: number}) => {
-    useEffect(() => {
         console.log('menu build')
-    }, []);
+
     return (
         <div>
             this is menu component {id}
