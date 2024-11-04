@@ -1,27 +1,20 @@
-import React, {FC, useCallback, useEffect, useState} from 'react';
+import React, {FC, useCallback, useEffect, useMemo, useState} from 'react';
 import './App.css';
 import Menu from "./components/Menu";
+import TonyStark from "./components/TonyStark";
+import ColonelMamba from "./components/ColonelMamba";
+import IronSuite from "./components/IronSuite";
 
 
-function App(){
-    let [number, setNumber] = useState<number>(0)
+function App() {
 
-    useEffect(() => {
-        console.log('app build')
-    });
+    return (
+        <>
+            <IronSuite><TonyStark/></IronSuite>
+            <IronSuite><ColonelMamba/></IronSuite>
 
-    const someFunc= useCallback(():void=>{
-        console.log('asd');
-    }, [])
-  return (
-      <>
-          <Menu id={0} someFn={someFunc}/>
-          <h2>{number}</h2>
-        <button onClick={()=>{
-            setNumber(++number)
-        }}>increment</button>
-      </>
-  );
+        </>
+    );
 }
 
 export default App;
