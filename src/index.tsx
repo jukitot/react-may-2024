@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import UsersPage from "./pages/UsersPage";
+import LoadUsersPage from "./pages/LoadUsersPage";
+import ShowUsersPage from "./pages/ShowUsersPage";
+import ShowPostsPage from "./pages/ShowPostsPage";
 
 
 const root = ReactDOM.createRoot(
@@ -12,7 +14,9 @@ const root = ReactDOM.createRoot(
 
 const routes = createBrowserRouter([
     {path: '/', element: <App/>, children:[
-            {path:'users', element:<UsersPage/>}
+            {path:'users', element:<LoadUsersPage/>},
+            {path:'show', element:<ShowUsersPage/>},
+            {path: 'posts', element: <ShowPostsPage/>}
         ]}
 ])
 root.render(
