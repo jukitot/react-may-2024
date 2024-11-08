@@ -2,14 +2,16 @@ import React, {useEffect, useState} from 'react';
 import Products from "../components/Products/Products";
 import PaginationComponent from "../components/Pagination/PaginationComponent";
 import {useSearchParams} from "react-router-dom";
-import {IProduct} from "../models/IProduct";
 import {apiService} from "../services/api.service";
+import {useAppDispatch, useAppSelector} from "../redux/store";
+import {loadProducts} from "../redux/slices/ProductSlice";
 
 const ProductsPage = () => {
 
     const [query, setQuery] = useSearchParams({page: '1'});
 
-    const [products, setProducts] = useState<IProduct[]>([])
+    let {products} = useAppSelector(store => store.productSlice);
+    let dispatch = useAppDispatch();
 
     const [flag, setFlag] = useState<boolean>(false)
 
@@ -19,7 +21,7 @@ const ProductsPage = () => {
             apiService.products
                 .getAll(+page)
                 .then(value => {
-                    setProducts(value.products)
+                    dispatch(loadProducts(value.products))
                     const lastId = value.products[value.products.length - 1].id;
                     if (lastId >= value.total) {
                         setFlag(true)

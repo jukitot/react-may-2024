@@ -9,6 +9,8 @@ const Menu = () => {
                 <li><Link to={'/'}>HOME</Link></li>
                 <li><Link to={'users'}>USERS</Link></li>
                 <li><Link to={'products'}>PRODUCTS</Link></li>
+                <li><Link to={'comments'}>COMMENTS</Link></li>
+                <li><Link to={'posts'}>POSTS</Link></li>
             </ul>
         </div>
     );

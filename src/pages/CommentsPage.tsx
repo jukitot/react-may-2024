@@ -1,31 +1,29 @@
 import React, {useEffect, useState} from 'react';
-import Users from "../components/Users/Users";
-import PaginationComponent from "../components/Pagination/PaginationComponent";
+import {store, useAppDispatch, useAppSelector} from "../redux/store";
 import {useSearchParams} from "react-router-dom";
-
 import {apiService} from "../services/api.service";
-import {useAppDispatch, useAppSelector} from "../redux/store";
 import {loadUsers} from "../redux/slices/UserSlice";
 
-const UsersPage = () => {
+import PaginationComponent from "../components/Pagination/PaginationComponent";
+import Comments from "../components/Comments/Comments";
+import {loadComments} from "../redux/slices/CommentSlice";
 
+const CommentsPage = () => {
     const [query, setQuery] = useSearchParams({page: '1'});
 
-    ///add store
-    let {users} = useAppSelector(store => store.userSlicer);
-    let dispatch = useAppDispatch();
-    ///
 
+    let {comments} = useAppSelector(store=> store.commentSlice);
+    let dispatch = useAppDispatch();
     const [flag, setFlag] = useState<boolean>(false)
 
     useEffect(() => {
         const page = query.get('page')
         if (page) {
-            apiService.users
+            apiService.comments
                 .getAll(+page)
                 .then(value => {
-                    dispatch(loadUsers(value.users))
-                    const lastId = value.users[value.users.length - 1].id;
+                    dispatch(loadComments(value.comments))
+                    const lastId = value.comments[value.comments.length - 1].id;
                     if (lastId >= value.total) {
                         setFlag(true)
                     } else {
@@ -36,10 +34,10 @@ const UsersPage = () => {
     }, [query]);
     return (
         <div>
-            <Users users={users}/>
+            <Comments comments={comments}/>
             <PaginationComponent flag={flag}/>
         </div>
     );
 };
 
-export default UsersPage;
+export default CommentsPage;
